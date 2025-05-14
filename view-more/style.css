@@ -1,0 +1,19 @@
+[class^=wrapper-01] [class^=wrapper-02] [role=presentation] {
+    max-height: 125px;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out
+}
+
+[class^=wrapper-01] [class^=wrapper-02] .btn-description {
+    transition: all .5s cubic-bezier(.5, 0, .5, 1);
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+[class^=wrapper-01] [class^=wrapper-02] [role=presentation].max-height-add {   
+    max-height: unset;
+}
