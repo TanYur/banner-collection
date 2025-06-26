@@ -1,0 +1,207 @@
+div[data-id='142'],
+div[data-id='147'],
+div[data-id='149'],
+div[data-id='62'],
+div[data-id='67'],
+div[data-id='83'] {
+    height: 578px
+}
+
+.banner-bsm-banner-title,
+.banner-bsm-banner-title-container {
+    position: relative;
+    background: #f2f2f2;
+    height: 578px;
+    min-height: 578px;
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media(min-width:2543px) {
+
+    .banner-bsm-banner-title-container img,
+    .banner-bsm-banner-title-container picture {
+        height: auto;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%
+    }
+}
+
+.banner-bsm-banner-title-container img,
+.banner-bsm-banner-title-container picture {
+    height: 578px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.banner-banner-title-imgs {
+    position: absolute;
+    width: 1350px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-banner-title-imgs img,
+.banner-banner-title-imgs picture {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+.banner-bsm-banner-title-container-img-mob,
+.banner-banner-title-img-one-mob {
+    display: none
+}
+
+@media (max-width:1300px) {
+    .banner-banner-title-imgs {
+        width: 1150px;
+        justify-content: flex-end;
+    }
+    .banner-banner-title-imgs picture{
+        display: flex;
+        align-items: flex-end;
+    }
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+        height: 95%;
+    }
+}
+
+@media (max-width:1270px) {
+    .banner-banner-title-imgs {
+        width: 1050px;
+    }
+
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+        height: 93%;
+    }
+}
+
+@media (max-width:1020px) {
+    .banner-banner-title-imgs {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .banner-bsm-banner-title-container img,
+    .banner-bsm-banner-title-container picture {
+        object-position: 20% 50%;
+    }
+}
+
+@media (max-width:767px) {
+    .banner-banner-title-img-one {
+        display: none
+    }
+
+    .banner-banner-title-img-one-mob {
+        display: block
+    }
+
+    div[data-id='122'],
+    div[data-id='142'],
+    div[data-id='147'],
+    div[data-id='149'],
+    div[data-id='62'],
+    div[data-id='67'],
+    div[data-id='83'] {
+        height: 578px
+    }
+
+    .banner-bsm-banner-title,
+    .banner-bsm-banner-title-container {
+        position: relative;
+        width: 100%;
+        height: 578px;
+        justify-content: center;
+    }
+
+    .banner-bsm-banner-title-container-img {
+        display: none
+    }
+
+    .banner-bsm-banner-title-container-img-mob {
+        display: block
+    }
+
+    .banner-bsm-banner-title-container img,
+    .banner-bsm-banner-title-container picture {
+        width: 100%;
+        object-position: 50% 50%;
+    }
+
+    .banner-banner-title-imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        z-index: 11;
+    }
+}
+
+@media(max-width:450px) {
+
+    .banner-bsm-banner-title,
+    .banner-bsm-banner-title-container {
+        align-items: flex-end;
+    }
+
+    .banner-bsm-banner-title-container img,
+    .banner-bsm-banner-title-container picture {
+        width: 100%;
+    }
+
+    .banner-banner-title-imgs {
+        background-color: rgba(241, 183, 167, 0.39);
+        align-items: center;
+        height: auto;
+    }
+
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+        width: auto;
+        height: 100%;
+        margin-top: 0;
+        margin-right: 0;
+    }
+}
+
+@media(max-width:365px) {
+
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+      
+    }
+}
+
+@media(max-width:355px) {
+
+    .banner-banner-title-imgs img,
+    .banner-banner-title-imgs picture {
+        /* margin-bottom: 10px; */
+    }
+}
