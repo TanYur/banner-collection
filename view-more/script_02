@@ -1,70 +1,44 @@
-
-
-
-
 function seoDesc() {
-
-
     function getHeight() {
         let heightNeed;
         let heightVeiwLess;
         let heightTitle;
         let fontSizeParagraph;
         let lineHeightParagraph;
-
         if (content.querySelector("h2")) {
             heightTitle = window.getComputedStyle(content.querySelector("h2"), null).height;
-
         }
         if (content.querySelector("p")) {
             fontSizeParagraph = window.getComputedStyle(content.querySelector("p"), null).fontSize;
-
         }
         if (content.querySelector("p")) {
             lineHeightParagraph = window.getComputedStyle(content.querySelector("p"), null).lineHeight;
-
         }
-
         if (!!heightTitle && !!fontSizeParagraph && !!lineHeightParagraph) {
             heightNeed = [heightTitle, fontSizeParagraph, lineHeightParagraph].map((i, index) => i =
                 parseInt(i)).map(i => i = i || Math.round(parseInt(fontSizeParagraph) * 1.2));
-
             heightVeiwLess = heightNeed[0] + heightNeed[1] * 2 + heightNeed[2] + 'px';
-
         } else {
             heightVeiwLess = "81px"
         }
         return heightVeiwLess;
     };
-
-
     const content = document.querySelector(
-        '[class^=ProductListDescription_wrapper] [class^=WidgetText_wrapper] [role=presentation]');
-    
+        '[class^=ProductListDescription_wrapper] [class^=WidgetText_wrapper] [role=presentation]');    
     let heightWidget = window.getComputedStyle(content, null).height;
     content.style.maxHeight = getHeight();
-
-
     if (document.querySelectorAll('.btn-seo-description').length == 0) {
         const containerForBtn = document.querySelector(
             ' [class^=ProductListDescription_wrapper] [class^=WidgetText_wrapper] [role=presentation]')
             .parentNode;
         const btnSeoDescription = document.createElement('button');
         btnSeoDescription.classList.add('btn-seo-description');
-        btnSeoDescription.textContent = "Mehr sehen";
-
-       
-        //console.log(parseInt(heightWidget));
-        //console.log(parseInt(getHeight()));
-
-
+        btnSeoDescription.textContent = "Mehr sehen"; 
         if (parseInt(heightWidget) > parseInt(getHeight())) {
             containerForBtn.appendChild(btnSeoDescription);
         };       
-
         btnSeoDescription.addEventListener('click', () => {
             content.classList.toggle('opened');
-
             if (content.classList.contains('opened')) {
                 btnSeoDescription.textContent = 'Weniger anzeigen';
                 content.style.maxHeight = content.scrollHeight + 'px';
