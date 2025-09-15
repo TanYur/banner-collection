@@ -1,19 +1,84 @@
-[class^=wrapper-01] [class^=wrapper-02] [role=presentation] {
-    max-height: 125px;
-    overflow: hidden;
-    transition: max-height .5s ease-in-out
-}
+ <style>
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] {
+                color: #000;
+                letter-spacing: normal;
+                overflow: hidden;
+                transition: max-height .5s ease-in-out
+            }
 
-[class^=wrapper-01] [class^=wrapper-02] .btn-description {
-    transition: all .5s cubic-bezier(.5, 0, .5, 1);
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: underline;
-    margin-top: 20px;
-    background-color: transparent;
-    border: none;
-}
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] h2 {
+                margin: 0 0 3px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.2em;
+            }
 
-[class^=wrapper-01] [class^=wrapper-02] [role=presentation].max-height-add {   
-    max-height: unset;
-}
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] h3 {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4em;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] a {
+                font-size: 14px;
+                line-height: 1em;
+                text-decoration: underline;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] a:hover {
+                color: #9a824c
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] p,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] li {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.6em;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] p {
+                margin: 0 0 20px;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] p strong {
+                font-weight: 500;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] ol,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] ul {
+                margin: 20px 0 20px 20px;
+                list-style-type: disc;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] h2 strong,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] h3 strong,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] a strong,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] p strong,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] li strong {
+                font-weight: 500;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] ul li a,
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] ol li a {
+                overflow-wrap: anywhere;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation] ol {
+                list-style-position: outside;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] .btn-seo-description {
+                transition: all .5s cubic-bezier(.5, 0, .5, 1);
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: underline;
+                margin-top: 10px;
+                background-color: transparent;
+                border: none;
+                color: #000;
+            }
+
+            [class^=wrapper-01] [class^=wrapper-02] [role=presentation].add-max-height {
+                max-height: unset;
+            }
+        </style>
