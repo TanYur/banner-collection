@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sticker_slider</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+       <style>*{ box-sizing: border-box;} html, body{ margin: 0; padding: 0; overflow-x: hidden;} .slider{ position: sticky; top: 0; z-index: 11; width: 100%; max-width: 100%; overflow: hidden; background: transparent;} .slides{ display: flex; width: 100%; transition: transform 0.6s ease-in-out; will-change: transform; transform: translate3d(0, 0, 0); backface-visibility: hidden;} .slide-item{ flex: 0 0 100%; width: 100%; max-width: 100%; display: block; line-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #fff; font-family: "Manrope", sans-serif;} .slide-item:hover{ text-decoration: none;} .sticker-container{ height: 32px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px;} .sticker-text{ font-size: 14px; letter-spacing: 1px; white-space: nowrap; font-weight: 300; margin: 0;} .sticker-text-mobile{ display: none;} @media (max-width: 1023px){ .sticker-text{ display: none;} .sticker-text-mobile{ display: block; white-space: normal; letter-spacing: 1px; font-size: 12px;}} .item-01{ background: #fd1b84;} .item-02{ background: #bdfd1b; color: #000;} .item-03{ background: #ff0000;} .item-04{ background: #a1f1ff;color: #000;} </style>
+
+
+        <div class="slider">
+            <div class="slides">
+                <a href="https://tanyur.github.io/Java-Script-Calculator/" class="item-01 slide-item">
+                    <div class="sticker-container">
+                        <p class="sticker-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur.
+                        </p>
+                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </a>
+
+                <a href="https://tanyur.github.io/Theme-maket/" class="item-02 slide-item">
+                    <div class="sticker-container">
+                        <p class="sticker-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+                            aliquam</p>
+                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </a>
+
+                <a href="https://tanyur.github.io/yoga-project/" class="item-03 slide-item">
+                    <div class="sticker-container">
+                        <p class="sticker-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt?</p>
+                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </a>
+
+                <a href="https://tanyur.github.io/TY-Drum-Machine/" class="item-04 slide-item">
+                    <div class="sticker-container">
+                        <p class="sticker-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+                            totam reprehenderit.</p>
+                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <script>
+            const slider = document.querySelector('.slider');
+            const slidesWrapper = document.querySelector('.slides');
+
+            // все слайды
+            let slides = document.querySelectorAll('.slide-item');
+
+            // текущий индекс
+            let currentIndex = 1;
+
+            // скорость
+            const intervalTime = 1200;
+
+            // ===== CLONE =====
+
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[slides.length - 1].cloneNode(true);
+
+            firstClone.id = 'first-clone';
+            lastClone.id = 'last-clone';
+
+            slidesWrapper.appendChild(firstClone);
+            slidesWrapper.prepend(lastClone);
+
+            // обновляем список
+            slides = document.querySelectorAll('.slide-item');
+
+            // ===== POSITION =====
+
+            function setPosition() {
+                slidesWrapper.style.transform =
+                    `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setPosition();
+
+            // ===== MOVE =====
+
+            function moveToNextSlide() {
+                if (currentIndex >= slides.length - 1) return;
+
+                currentIndex++;
+
+                slidesWrapper.style.transition =
+                    'transform 0.5s ease-in-out';
+
+                setPosition();
+            }
+
+            function moveToPrevSlide() {
+                if (currentIndex <= 0) return;
+
+                currentIndex--;
+
+                slidesWrapper.style.transition =
+                    'transform 0.5s ease-in-out';
+
+                setPosition();
+            }
+
+            // ===== INFINITE EFFECT =====
+
+            slidesWrapper.addEventListener('transitionend', () => {
+
+                // если дошли до клона первого
+                if (slides[currentIndex].id === 'first-clone') {
+
+                    slidesWrapper.style.transition = 'none';
+
+                    currentIndex = 1;
+
+                    setPosition();
+                }
+
+                // если дошли до клона последнего
+                if (slides[currentIndex].id === 'last-clone') {
+
+                    slidesWrapper.style.transition = 'none';
+
+                    currentIndex = slides.length - 2;
+
+                    setPosition();
+                }
+            });
+
+            // ===== AUTOPLAY =====
+
+            let sliderInterval = setInterval(() => {
+                moveToNextSlide();
+            }, intervalTime);
+
+            // ===== PAUSE ON HOVER =====
+
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(sliderInterval);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+
+                sliderInterval = setInterval(() => {
+                    moveToNextSlide();
+                }, intervalTime);
+
+            });
+        </script>
+
+
+
+
+
+
+
+    </body>
+
+</html>
