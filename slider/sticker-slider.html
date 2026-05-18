@@ -12,150 +12,300 @@
 
     <body>
 
-       <style>*{ box-sizing: border-box;} html, body{ margin: 0; padding: 0; overflow-x: hidden;} .slider{ position: sticky; top: 0; z-index: 11; width: 100%; max-width: 100%; overflow: hidden; background: transparent;} .slides{ display: flex; width: 100%; transition: transform 0.6s ease-in-out; will-change: transform; transform: translate3d(0, 0, 0); backface-visibility: hidden;} .slide-item{ flex: 0 0 100%; width: 100%; max-width: 100%; display: block; line-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #fff; font-family: "Manrope", sans-serif;} .slide-item:hover{ text-decoration: none;} .sticker-container{ height: 32px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px;} .sticker-text{ font-size: 14px; letter-spacing: 1px; white-space: nowrap; font-weight: 300; margin: 0;} .sticker-text-mobile{ display: none;} @media (max-width: 1023px){ .sticker-text{ display: none;} .sticker-text-mobile{ display: block; white-space: normal; letter-spacing: 1px; font-size: 12px;}} .item-01{ background: #fd1b84;} .item-02{ background: #bdfd1b; color: #000;} .item-03{ background: #ff0000;} .item-04{ background: #a1f1ff;color: #000;} </style>
+          <style>
+            * {
+                box-sizing: border-box
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            .slider {
+                position: sticky;
+                top: 0;
+                z-index: 11;
+                width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+                background: transparent;
+                /* margin-top: 1px; */
+                /* opacity: 0; */
+                /* will-change: opacity; */
+                border-top: 1px solid green;
+            }
+
+            .slides {
+                display: flex;
+                width: 100%;
+                transition: transform 0.6s ease-in-out;
+                will-change: transform;
+                /* visibility: hidden; */
+                /* transform: translate3d(-100%, 0, 0); */
+                /* backface-visibility: hidden; */
+            }
+
+            .slide-item {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+                display: block;
+                line-height: 0;
+            }
+
+            .darmowa-row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: #fff;
+                font-family: var(--font-manrope, Arial, sans-serif);
+            }
+
+            .darmowa-container {
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .sticker-text {
+                color: #fff;
+                font-size: 14px;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                font-weight: 300;
+                margin: 0;
+            }
+
+            .sticker-text-mobile {
+                display: none
+            }
+
+            @media (max-width: 1023px) {
+                .sticker-text {
+                    display: none
+                }
+
+                .sticker-text-mobile {
+                    display: block;
+                    white-space: normal;
+                    letter-spacing: 1px;
+                    font-size: 12px;
+                }
+            }
+
+            .item-dzien-matki {
+                background: #9f010a
+            }
+
+            .item-travel {
+                background: #7b5534
+            }
+
+            .item-03 {
+                background: #ff0000
+            }
+
+            .item-04 {
+                background: #c3c3c3
+            }
+        </style>
 
 
         <div class="slider">
             <div class="slides">
-                <a href="https://tanyur.github.io/Java-Script-Calculator/" class="item-01 slide-item">
-                    <div class="sticker-container">
-                        <p class="sticker-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur.
-                        </p>
-                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+
+                <a href="/produkty-dzien-matki" class="darmowa-row item-dzien-matki slide-item">
+                    <div class="darmowa-container">
+                        <p class="sticker-text">DZIEŃ MATKI - dodatkowe rabaty do 30% na torebki, buty</p>
+                        <p class="sticker-text-mobile">DZIEŃ MATKI - dodatkowe rabaty do 30%</p>
                     </div>
                 </a>
 
-                <a href="https://tanyur.github.io/Theme-maket/" class="item-02 slide-item">
-                    <div class="sticker-container">
-                        <p class="sticker-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-                            aliquam</p>
-                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet.</p>
+                <a href="/bagaz" class="darmowa-row item-travel slide-item">
+                    <div class="darmowa-container">
+                        <p class="sticker-text">EKSTRA rabat 25% na Kolekcję Travel przy zakupach za min. 249 zł</p>
+                        <p class="sticker-text-mobile">EKSTRA rabat 25% na Kolekcję Travel</p>
                     </div>
                 </a>
 
-                <a href="https://tanyur.github.io/yoga-project/" class="item-03 slide-item">
-                    <div class="sticker-container">
-                        <p class="sticker-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt?</p>
-                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="/mezczyzna" class="darmowa-row item-03 slide-item">
+                    <div class="darmowa-container">
+                        <p class="sticker-text">Special Offer - bis zu 30% Extra-Rabatt auf Taschen, Schuhe</p>
+                        <p class="sticker-text-mobile">Special Offer - bis zu 30% Extra-Rabatt</p>
                     </div>
                 </a>
 
-                <a href="https://tanyur.github.io/TY-Drum-Machine/" class="item-04 slide-item">
-                    <div class="sticker-container">
-                        <p class="sticker-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-                            totam reprehenderit.</p>
-                        <p class="sticker-text-mobile">Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="/kobieta/torebki/plecaki-damskie" class="darmowa-row item-04 slide-item">
+                    <div class="darmowa-container">
+                        <p class="sticker-text">Special Offer – dodatečné slevy až 30 % na kabelky, boty</p>
+                        <p class="sticker-text-mobile">Special Offer – dodatečné slevy až 30 %</p>
                     </div>
                 </a>
 
             </div>
         </div>
 
-        <script>
-            const slider = document.querySelector('.slider');
-            const slidesWrapper = document.querySelector('.slides');
+       <script>
+(function () {
 
-            // все слайды
-            let slides = document.querySelectorAll('.slide-item');
+    function initSlider() {
 
-            // текущий индекс
-            let currentIndex = 1;
+        const slider = document.querySelector('.slider');
+        if (!slider) return;
 
-            // скорость
-            const intervalTime = 1200;
+        if (slider.dataset.initialized === 'true') return;
+        slider.dataset.initialized = 'true';
 
-            // ===== CLONE =====
+        const track = slider.querySelector('.slides');
+        let slides = slider.querySelectorAll('.slide-item');
 
-            const firstClone = slides[0].cloneNode(true);
-            const lastClone = slides[slides.length - 1].cloneNode(true);
+        const originalLength = slides.length;
 
-            firstClone.id = 'first-clone';
-            lastClone.id = 'last-clone';
+        if (originalLength <= 1) return;
 
-            slidesWrapper.appendChild(firstClone);
-            slidesWrapper.prepend(lastClone);
+        // clones
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[originalLength - 1].cloneNode(true);
 
-            // обновляем список
-            slides = document.querySelectorAll('.slide-item');
+        firstClone.classList.add('clone');
+        lastClone.classList.add('clone');
 
-            // ===== POSITION =====
+        track.appendChild(firstClone);
+        track.prepend(lastClone);
 
-            function setPosition() {
-                slidesWrapper.style.transform =
-                    `translateX(-${currentIndex * 100}%)`;
+        slides = slider.querySelectorAll('.slide-item');
+
+        let index = 1;
+        let isAnimating = false;
+
+        const intervalTime = 5850;
+
+        function render(animate = true) {
+
+            track.style.transition = animate
+                ? 'transform 0.6s ease-in-out'
+                : 'none';
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+        }
+
+        // 🚨 старт ТОЛЬКО после DOM ready layout
+        requestAnimationFrame(() => {
+            render(false);
+        });
+
+        function next() {
+
+            if (isAnimating) return;
+
+            isAnimating = true;
+
+            index++;
+
+            render(true);
+        }
+
+        function prev() {
+
+            if (isAnimating) return;
+
+            isAnimating = true;
+
+            index--;
+
+            render(true);
+        }
+
+        track.addEventListener('transitionend', () => {
+
+            // right clone
+            if (index === slides.length - 1) {
+
+                track.style.transition = 'none';
+                index = 1;
+                render(false);
+
+                track.offsetHeight;
             }
 
-            setPosition();
+            // left clone
+            if (index === 0) {
 
-            // ===== MOVE =====
+                track.style.transition = 'none';
+                index = slides.length - 2;
+                render(false);
 
-            function moveToNextSlide() {
-                if (currentIndex >= slides.length - 1) return;
-
-                currentIndex++;
-
-                slidesWrapper.style.transition =
-                    'transform 0.6s ease-in-out .4s';
-
-                setPosition();
+                track.offsetHeight;
             }
 
-            function moveToPrevSlide() {
-                if (currentIndex <= 0) return;
+            requestAnimationFrame(() => {
+                track.style.transition =
+                    'transform 0.6s ease-in-out';
 
-                currentIndex--;
+                isAnimating = false;
+            });
 
-                slidesWrapper.style.transition =
-                    'transform 0.6s ease-in-out .6s';
+        });
 
-                setPosition();
+        let timer = setInterval(next, intervalTime);
+
+        slider.addEventListener('mouseenter', () => clearInterval(timer));
+
+        slider.addEventListener('mouseleave', () => {
+            timer = setInterval(next, intervalTime);
+        });
+
+        // swipe
+        let startX = null;
+
+        slider.addEventListener('touchstart', e => {
+            startX = e.touches[0].clientX;
+        });
+
+        slider.addEventListener('touchend', e => {
+
+            if (startX === null) return;
+
+            const diff = e.changedTouches[0].clientX - startX;
+
+            if (Math.abs(diff) > 40) {
+                diff > 0 ? prev() : next();
             }
 
-            // ===== INFINITE EFFECT =====
+            startX = null;
+        });
 
-            slidesWrapper.addEventListener('transitionend', () => {
+    }
 
-                // если дошли до клона первого
-                if (slides[currentIndex].id === 'first-clone') {
+    initSlider();
 
-                    slidesWrapper.style.transition = 'none';
+    const observer = new MutationObserver(() => {
 
-                    currentIndex = 1;
+        const slider = document.querySelector('.slider');
 
-                    setPosition();
-                }
+        if (slider && slider.dataset.initialized !== 'true') {
+            initSlider();
+        }
 
-                // если дошли до клона последнего
-                if (slides[currentIndex].id === 'last-clone') {
+    });
 
-                    slidesWrapper.style.transition = 'none';
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 
-                    currentIndex = slides.length - 2;
+})();
+</script>
 
-                    setPosition();
-                }
-            });
-
-            // ===== AUTOPLAY =====
-
-            let sliderInterval = setInterval(() => {
-                moveToNextSlide();
-            }, intervalTime);
-
-            // ===== PAUSE ON HOVER =====
-
-            slider.addEventListener('mouseenter', () => {
-                clearInterval(sliderInterval);
-            });
-
-            slider.addEventListener('mouseleave', () => {
-
-                sliderInterval = setInterval(() => {
-                    moveToNextSlide();
-                }, intervalTime);
-
-            });
-        </script>
 
 
 
